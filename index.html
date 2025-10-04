@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediNoteBT - Intelligent Medical Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">MediNoteBT</div>
+            </div>
+            <div class="nav__links">
+                <a href="#solution" class="nav__link">Solution</a>
+                <a href="#workflow" class="nav__link">Workflow</a>
+                <a href="#benefits" class="nav__link">Benefits</a>
+                <a href="#contact" class="nav__link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__background"></div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">Intelligent Medical Documentation. Simplified.</h1>
+                    <p class="hero__subtitle">Transform patient data into physician-approved discharge summaries in minutes</p>
+                    <div class="hero__cta">
+                        <button class="btn btn--primary btn--lg hero__button">Request Demo</button>
+                        <button class="btn btn--outline btn--lg">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__mockup">
+                        <div class="mockup__screen">
+                            <div class="mockup__header"></div>
+                            <div class="mockup__content">
+                                <div class="mockup__line mockup__line--long"></div>
+                                <div class="mockup__line"></div>
+                                <div class="mockup__line mockup__line--medium"></div>
+                                <div class="mockup__line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Is Your Discharge Process a Bottleneck?</h2>
+                <p class="section-subtitle">Healthcare teams face critical challenges that impact efficiency and patient care</p>
+            </div>
+            <div class="problem__grid">
+                <div class="problem__card card">
+                    <div class="problem__icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem__title">Inconsistencies</h3>
+                    <p class="problem__description">Different staff members use varying formats and levels of detail</p>
+                </div>
+                <div class="problem__card card">
+                    <div class="problem__icon problem__icon--error">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem__title">Errors & Omissions</h3>
+                    <p class="problem__description">Critical information can be missed, leading to compliance risks</p>
+                </div>
+                <div class="problem__card card">
+                    <div class="problem__icon problem__icon--delay">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem__title">Delays</h3>
+                    <p class="problem__description">Back-and-forth between staff and physicians slows bed turnover</p>
+                </div>
+                <div class="problem__card card">
+                    <div class="problem__icon problem__icon--burnout">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem__title">Clinician Burnout</h3>
+                    <p class="problem__description">Medical professionals spend hours on administrative tasks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="solution__content">
+                <div class="solution__text">
+                    <h2 class="section-title">The MediNoteBT Solution</h2>
+                    <p class="solution__description">
+                        MediNoteBT is an AI-powered platform that transforms the discharge summary process. 
+                        Our intelligent system connects to your patient database, generates comprehensive 
+                        discharge summaries, and facilitates seamless physician approval workflows.
+                    </p>
+                    <div class="solution__mission">
+                        <div class="mission__content">
+                            <h3 class="mission__title">Our Mission</h3>
+                            <p class="mission__text">
+                                To empower healthcare teams with intelligent automation that enhances 
+                                patient care while reducing administrative burden and improving workflow efficiency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution__visual">
+                    <div class="solution__diagram">
+                        <div class="diagram__step">
+                            <div class="diagram__icon">DB</div>
+                            <div class="diagram__label">Patient Data</div>
+                        </div>
+                        <div class="diagram__arrow">↓</div>
+                        <div class="diagram__step">
+                            <div class="diagram__icon">AI</div>
+                            <div class="diagram__label">AI Processing</div>
+                        </div>
+                        <div class="diagram__arrow">↓</div>
+                        <div class="diagram__step">
+                            <div class="diagram__icon">📄</div>
+                            <div class="diagram__label">Summary</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="workflow" id="workflow">
+
+        <!-- Add this image gallery section -->
+        <!-- <div class="image-gallery-container">
+        <div class="image-gallery">
+            <div class="gallery-track">
+            <div class="image-item">
+                <img src="images/step1.png" alt="Fetch Patient Data Interface" class="stepimage">
+            </div>
+            <div class="image-item">
+                <img src="images/step2.png" alt="AI Generated Summary" class="stepimage">
+            </div>
+            <div class="image-item">
+                <img src="images/step3.png" alt="Review and Edit Interface" class="stepimage">
+            </div>
+            <div class="image-item">
+                <img src="images/step4.png" alt="Physician Approval Interface" class="stepimage">
+            </div>
+            <div class="image-item">
+                <img src="images/step5.png" alt="Discharge Summary Approval on Tablet" class="stepimage stepimage--tablet">
+            </div>
+            </div>
+        </div>
+        </div> -->
+
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From Patient ID to Approved Document in 5 Simple Steps</h2>
+                <p class="section-subtitle">Experience the seamless workflow that transforms medical documentation</p>
+            </div>
+            <div class="workflow__timeline">
+                <div class="workflow__step" data-step="1">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <div class="step__visual">
+                            <div class="step__mockup step__mockup--fetch">
+                                <div class="mockup__header">
+                                    <div class="mockup__title">Fetch Patient Data</div>
+                                </div>
+                                <div class="mockup__form">
+                                    <div class="form__field">
+                                        <label>Patient ID</label>
+                                        <input type="text" value="P-2024-001" readonly>
+                                    </div>
+                                    <button class="btn--mini">Fetch Data</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__info">
+                            <h3 class="step__title">Fetch Patient Data</h3>
+                            <p class="step__description">Simply enter the Patient ID. MediNoteBT securely connects to your patient database and retrieves all relevant information instantly.</p>
+                            <div class="step__features">
+                                <span class="feature-tag">Instant Retrieval</span>
+                                <span class="feature-tag">Visual Confirmation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow__step" data-step="2">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <div class="step__visual">
+                            <div class="step__mockup step__mockup--generate">
+                                <div class="mockup__header">
+                                    <div class="mockup__title">AI Generated Summary</div>
+                                </div>
+                                <div class="mockup__document">
+                                    <div class="document__line"></div>
+                                    <div class="document__line document__line--short"></div>
+                                    <div class="document__line"></div>
+                                    <div class="document__line document__line--medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__info">
+                            <h3 class="step__title">Generate with AI</h3>
+                            <p class="step__description">Press 'Generate Summary' and our advanced AI processes the patient data to create a comprehensive, professionally formatted discharge summary.</p>
+                            <div class="step__features">
+                                <span class="feature-tag">One-Click Creation</span>
+                                <span class="feature-tag">Structured & Comprehensive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow__step" data-step="3">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <div class="step__visual">
+                            <div class="step__mockup step__mockup--edit">
+                                <div class="mockup__header">
+                                    <div class="mockup__title">Review & Edit</div>
+                                </div>
+                                <div class="mockup__editor">
+                                    <div class="editor__toolbar">
+                                        <button>B</button>
+                                        <button>I</button>
+                                        <button>U</button>
+                                    </div>
+                                    <div class="editor__content">
+                                        <div class="document__line"></div>
+                                        <div class="document__line document__line--editing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__info">
+                            <h3 class="step__title">Review & Refine</h3>
+                            <p class="step__description">The generated summary is a robust first draft with full editorial control for your team to edit and refine.</p>
+                            <div class="step__features">
+                                <span class="feature-tag">Full Editorial Control</span>
+                                <span class="feature-tag">Live Updates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow__step" data-step="4">
+                    <div class="step__number">4</div>
+                    <div class="step__content">
+                        <div class="step__visual">
+                            <div class="step__mockup step__mockup--approval">
+                                <div class="mockup__header">
+                                    <div class="mockup__title">Physician Approval</div>
+                                </div>
+                                <div class="mockup__approval">
+                                    <div class="approval__doctor">
+                                        <div class="doctor__avatar"></div>
+                                        <div class="doctor__info">Dr. Smith</div>
+                                    </div>
+                                    <button class="btn--approve">Send for Approval</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__info">
+                            <h3 class="step__title">Secure Physician Approval</h3>
+                            <p class="step__description">Select the approving physician and send a secure, tokenized link. No logins required for doctors.</p>
+                            <div class="step__features">
+                                <span class="feature-tag">Seamless Hand-off</span>
+                                <span class="feature-tag">Secure Tokenized Link</span>
+                                <span class="feature-tag">Approve or Modify</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workflow__step" data-step="5">
+                    <div class="step__number">5</div>
+                    <div class="step__content">
+                        <div class="step__visual">
+                            <div class="step__mockup step__mockup--final">
+                                <div class="mockup__header">
+                                    <div class="mockup__title">Approved & Finalized</div>
+                                </div>
+                                <div class="mockup__status">
+                                    <div class="status__item">
+                                        <div class="status__indicator status__indicator--approved"></div>
+                                        <span>Document Approved</span>
+                                    </div>
+                                    <div class="status__actions">
+                                        <button class="btn--export">Export PDF</button>
+                                        <button class="btn--archive">Archive</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step__info">
+                            <h3 class="step__title">Finalize & Distribute</h3>
+                            <p class="step__description">Real-time status updates, versatile export options, and automated archiving create a complete audit trail.</p>
+                            <div class="step__features">
+                                <span class="feature-tag">Real-Time Updates</span>
+                                <span class="feature-tag">Export Options</span>
+                                <span class="feature-tag">Automated Archiving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Elevate Efficiency, Accuracy, and Patient Care</h2>
+                <p class="section-subtitle">Transformative benefits across your entire healthcare organization</p>
+            </div>
+            <div class="benefits__grid">
+                <div class="benefit__card card">
+                    <div class="benefit__header">
+                        <div class="benefit__icon benefit__icon--admin">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM21 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">For Hospital Administrators</h3>
+                    </div>
+                    <ul class="benefit__list">
+                        <li>Increase Throughput: Accelerate discharge process and improve bed turnover</li>
+                        <li>Reduce Operational Costs: Minimize man-hours on manual documentation</li>
+                        <li>Enhance Standardization: Consistent, high-quality summaries across institution</li>
+                    </ul>
+                </div>
+
+                <div class="benefit__card card">
+                    <div class="benefit__header">
+                        <div class="benefit__icon benefit__icon--clinician">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">For Clinicians</h3>
+                    </div>
+                    <ul class="benefit__list">
+                        <li>Reclaim Time for Patients: Cut down paperwork, focus on patient care</li>
+                        <li>Reduce Cognitive Load: AI does the heavy lifting of data collation</li>
+                        <li>Streamline Collaboration: Transparent digital approval workflow</li>
+                    </ul>
+                </div>
+
+                <div class="benefit__card card">
+                    <div class="benefit__header">
+                        <div class="benefit__icon benefit__icon--compliance">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">For Compliance and IT</h3>
+                    </div>
+                    <ul class="benefit__list">
+                        <li>Ensure Accuracy: AI-driven generation minimizes human error</li>
+                        <li>Secure & Auditable: Complete digital trail for regulatory compliance</li>
+                        <li>Easy Integration: Lightweight system with secure API integration</li>
+                    </ul>
+                </div>
+
+                <div class="benefit__card card">
+                    <div class="benefit__header">
+                        <div class="benefit__icon benefit__icon--patient">
+                            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit__title">For Patient Outcomes</h3>
+                    </div>
+                    <ul class="benefit__list">
+                        <li>Clearer Communication: Consistent, accurate discharge instructions</li>
+                        <li>Safer Transitions: Complete summaries reduce readmission risk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__content">
+                <div class="contact__text">
+                    <h2 class="section-title">Ready to Revolutionize Your Clinical Documentation?</h2>
+                    <p class="contact__description">
+                        Experience the future of medical documentation. Schedule a personalized demo 
+                        and see how MediNoteBT can transform your discharge process.
+                    </p>
+                    <div class="contact__info">
+                        <div class="contact__item">
+                            <span class="contact__label">Website:</span>
+                            <a href="https://www.boehmtech.co" target="_blank" class="contact__link">www.boehmtech.co</a>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__label">Email:</span>
+                            <a href="mailto:info@boehmtech.co" class="contact__link">info@boehmtech.co</a>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__label">Phone:</span>
+                            <a href="tel:+917356777841" class="contact__link">+91 73567 77841</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form">
+                    <form class="demo-form">
+                        <h3 class="form__title">Request Your Demo</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Hospital/Organization">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="">Role</option>
+                                <option value="administrator">Hospital Administrator</option>
+                                <option value="clinician">Clinician</option>
+                                <option value="it">IT Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Tell us about your current discharge documentation process..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Schedule Demo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">MediNoteBT</h3>
+                    <p class="footer__tagline">Intelligent Medical Documentation. Simplified.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Security</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 MediNoteBT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
